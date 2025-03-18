@@ -1,15 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
-
-'''def selecionar_opcao(event):
-    # Obtém a opção selecionada na Combobox
-    opcao_selecionada = caixinha.get()
-    resultado.config(text=f"Opção selecionada: {opcao_selecionada}")
-
-def exibir_entrada():
-    texto = campo_entrada.get()
-    resultado2.config(text=f'Texto inserido: {texto}')'''
+from dados import *
 
 # Letra
 co4 = "#403d3d"
@@ -29,26 +21,36 @@ style.theme_use('clam')
 frame_pokemon = Frame(janela, width=550, height=290, relief='flat')
 frame_pokemon.grid(row=1, column=0)
 
+def trocar_pokemon(i):
+    global imagem_pokemon, pok_imagem
+
+    # Tipo
+    pok_nome['text'] = i
+    pok_categoria['text'] = pokemon[i]['categoria'][1]
+    pok_id['text'] = pokemon[i]['categoria'][0]
+
+    # Imagem
+
+    imagem_pokemon = pokemon[i]['categoria'][2]
+    imagem_pokemon = Image.open(imagem_pokemon)
+    imagem_pokemon = imagem_pokemon.resize((238, 238))
+    imagem_pokemon = ImageTk.PhotoImage(imagem_pokemon)
+
+    pok_imagem = Label(frame_pokemon, image=imagem_pokemon, relief='flat', bg='white', fg='black')
+    pok_imagem.place(x=60, y=50)
+
 # Nome
-pok_nome = Label(frame_pokemon, text='PIKACHU', relief='flat', anchor=CENTER, font=('Fixedsys', 20), bg='white', fg='black')
+pok_nome = Label(frame_pokemon, text='', relief='flat', anchor=CENTER, font=('Fixedsys', 20), bg='white', fg='black')
 pok_nome.place(x=12, y=15)
 
 # Categoria
-pok_categoria = Label(frame_pokemon, text='Eletrico', relief='flat', anchor=CENTER, font=('Ivy', 10), bg='white', fg='black')
+pok_categoria = Label(frame_pokemon, text='', relief='flat', anchor=CENTER, font=('Ivy', 10), bg='white', fg='black')
 pok_categoria.place(x=12, y=50)
 pok_categoria.lift()
 
 # ID
-pok_id = Label(frame_pokemon, text='#025', relief='flat', anchor=CENTER, font=('Ivy', 10), bg='white', fg='black')
+pok_id = Label(frame_pokemon, text='', relief='flat', anchor=CENTER, font=('Ivy', 10), bg='white', fg='black')
 pok_id.place(x=12, y=75)
-
-# Imagem
-imagem_pokemon = Image.open('images/pikachu.png')
-imagem_pokemon = imagem_pokemon.resize((238, 238))
-imagem_pokemon = ImageTk.PhotoImage(imagem_pokemon)
-
-pok_imagem = Label(frame_pokemon, image=imagem_pokemon, relief='flat', bg='white', fg='black')
-pok_imagem.place(x=60, y=50)
 
 # Status
 pok_status = Label(janela, text='Status', relief='flat', anchor=CENTER, font=('Verdana', 20), bg='white', fg='black')
@@ -86,6 +88,48 @@ pok_habilidade1.place(x=195, y=360)
 pok_habilidade2 = Label(janela, text='Soco elétrico', relief='flat', anchor=CENTER, font=('Verdana', 10), bg='white', fg=co4)
 pok_habilidade2.place(x=195, y=385)
 
+# Criando botões
+imagem_pokemon_1 = Image.open('images/cabeca-pikachu.png')
+imagem_pokemon_1 = imagem_pokemon_1.resize((40, 40))
+imagem_pokemon_1 = ImageTk.PhotoImage(imagem_pokemon_1)
+
+bot_pok_1 = Button(janela, command=lambda: trocar_pokemon('PIKACHU'), image=imagem_pokemon_1, text='Pikachu', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_1.place(x=375, y=10)
+
+imagem_pokemon_2 = Image.open('images/cabeca-bulbasaur.png')
+imagem_pokemon_2 = imagem_pokemon_2.resize((40, 40))
+imagem_pokemon_2 = ImageTk.PhotoImage(imagem_pokemon_2)
+
+bot_pok_2 = Button(janela, command=lambda: trocar_pokemon('BULBASAUR'), image=imagem_pokemon_2, text='Bulbasaur', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_2.place(x=375, y=65)
+
+imagem_pokemon_3 = Image.open('images/cabeca-charmander.png')
+imagem_pokemon_3 = imagem_pokemon_3.resize((40, 40))
+imagem_pokemon_3 = ImageTk.PhotoImage(imagem_pokemon_3)
+
+bot_pok_3 = Button(janela, command=lambda: trocar_pokemon('CHARMANDER'), image=imagem_pokemon_3, text='Charmander', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_3.place(x=375, y=120)
+
+imagem_pokemon_4 = Image.open('images/cabeca-gyarados.png')
+imagem_pokemon_4 = imagem_pokemon_4.resize((40, 40))
+imagem_pokemon_4 = ImageTk.PhotoImage(imagem_pokemon_4)
+
+bot_pok_4 = Button(janela, command=lambda: trocar_pokemon('GYARADOS'), image=imagem_pokemon_4, text='Gyarados', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_4.place(x=375, y=175)
+
+imagem_pokemon_5 = Image.open('images/cabeca-gengar.png')
+imagem_pokemon_5 = imagem_pokemon_5.resize((40, 40))
+imagem_pokemon_5 = ImageTk.PhotoImage(imagem_pokemon_5)
+
+bot_pok_5 = Button(janela, command=lambda: trocar_pokemon('GENGAR'), image=imagem_pokemon_5, text='Gengar', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_5.place(x=375, y=230)
+
+imagem_pokemon_6 = Image.open('images/cabeca-dragonite.png')
+imagem_pokemon_6 = imagem_pokemon_6.resize((40, 40))
+imagem_pokemon_6 = ImageTk.PhotoImage(imagem_pokemon_6)
+
+bot_pok_6 = Button(janela, command=lambda: trocar_pokemon('DRAGONITE'), image=imagem_pokemon_6, text='Dragonite', width=150, relief='raised', overrelief=RIDGE, compound=LEFT, anchor=NW, padx=5, font=('Verdana', 12), bg='white', fg='black')
+bot_pok_6.place(x=375, y=285)
 
 
 
