@@ -33,6 +33,6 @@ pokemon = {
     'DRAGONITE': {
         'status': ['HP: 500', 'Ataque: 600', 'Defesa: 400', 'Velocidade: 400', 'Total: 1.900'],
         'habilidades': ['Dança do Dragão', 'Velocidade Extrema'],
-        'categoria': ['#149', 'dragão', 'images/dragonite.png', '#'],
+        'categoria': ['#149', 'dragão', 'images/dragonite.png', '#C29791'],
     },
 }
