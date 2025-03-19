@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73bc3e11-fdf0-4853-a7ec-a6a200a840c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/home_pokedex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/Tree-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/Tree-01.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/Tree-02.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/home_pokedex.exe.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/home_pokedex.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/warn-home_pokedex.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/home_pokedex/xref-home_pokedex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/home_pokedex.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home_pokedex.spec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dados.py" beforeDir="false" afterPath="$PROJECT_DIR$/dados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_pokedex.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_pokedex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedex.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokedex.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +57,16 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2uRuzVb5ra7p611ZY9kzHFfDR3k" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.home_pokedex.executor": "Run",
     "Python.pokedex.executor": "Run",
     "Python.teste.executor": "Run",
@@ -70,5 +91,8 @@
       <updated>1742223970777</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
